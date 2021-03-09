@@ -1,5 +1,9 @@
 # tenkici
 
+Tank Trouble clone
+You can try it on http://tenkici.asprogram.com/
+
+
 ## Project setup
 ```
 npm install
