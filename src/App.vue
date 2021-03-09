@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <Tenkici/>
+    <div id="tenkici">
+        <h1 style="padding: 0.5rem;margin-bottom: 0;">Tenkići</h1>
+        <Game ref="game"/>
+    </div>
   </div>
 </template>
 
 <script>
-import Tenkici from './components/Tenkici.vue'
+import Game from './components/Game.vue'
 
 export default {
   name: 'App',
   components: {
-    Tenkici
+    Game
+  },
+  methods:{
   }
 }
 </script>
@@ -23,5 +28,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   /*margin-top: 60px;*/
+  background-color: whitesmoke;
+  max-width: 1200px;
+  margin: auto;
+}
+
+body{
+    background-color: gainsboro;
 }
 </style>

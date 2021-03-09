@@ -1,5 +1,5 @@
 <template>
-    <div id="game"  @keydown="pritisnuo" @keyup="pustio" tabindex=-1>
+    <div id="game"  @keydown="/*pritisnuo*/" @keyup="pustio" tabindex=-1>
     
         <canvas id="canvas" width="600" height="400" style="margin-bottom: 2rem; margin-top: 1rem" >
 
@@ -289,7 +289,7 @@ export default {
 
             this.drawTank(this.tenkici[0]);
             this.drawTank(this.tenkici[1]);
-            this.iscrtajOkvir(this.tenkici[0]);
+            //this.iscrtajOkvir(this.tenkici[0]);
             this.drawTable();
 
         },
@@ -346,7 +346,7 @@ export default {
             c.height=mapa.height;
             var ctx2 = c.getContext("2d");    
             this.ctx = ctx2;
-                        this.ctx.clearRect(0, 0, this.width, this.height);
+            this.ctx.clearRect(0, 0, this.width, this.height);
 
             //this.drawTable();
             //this.drawBall();
@@ -355,11 +355,22 @@ export default {
     },
     mounted() {
         //console.log(this.mapa);
+        var self=this;
+        // document.getElementById('game').focus();
         window.addEventListener("keydown", function(e) {
             // space and arrow keys
             if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
                 e.preventDefault();
             }
+            self.pritisnuo(e);
+
+        }, false);
+        window.addEventListener("keyup", function(e) {
+            // space and arrow keys
+            if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+            self.pustio(e);
         }, false);
         this.postavi();  
     },
