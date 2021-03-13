@@ -1,8 +1,11 @@
 # tenkici
 
 Tank Trouble clone<br>
-You can try it on http://tenkici.asprogram.com/
+You can play it on http://tenkici.asprogram.com/
 
+## Commands
+**Green player:**<br> &nbsp;&nbsp; move: Arow keys<br> &nbsp;&nbsp; fire: M<br>
+**Red player:** <br> &nbsp;&nbsp; move: E, S, D, F<br> &nbsp;&nbsp; fire: Q
 
 ## Project setup
 ```
